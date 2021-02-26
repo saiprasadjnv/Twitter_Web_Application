@@ -1,0 +1,22 @@
+<h2>Sign Up</h2>
+
+<!--<form action="/admin/data" method="post">-->
+
+<%= form_for @conn, Routes.signup_path(@conn, :insert), fn u-> %>
+<div>
+<label for="numUsers">Number of users</label>
+<input type="text" id="numUsers" name="numUsers">
+<%= label u, :numUsers %>
+<%= text_input u, :numUsers %>
+</div>
+<div>
+<%= label u, :numTweets %>
+<%= text_input u, :numTweets %>
+</div>
+
+<div>
+  <button type="submit">Simulate</button>
+</div>
+<!--
+</form>-->
+<%end%>
